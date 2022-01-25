@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+<h1>{% block title %} Posts {% endblock %}</h1>
+<p>We love us some posts!</p>
+<ul>
+    {% for article in articles %}
+    <li>
+        <a href="{{ url_for('articles', name=article.path) }}">{{ article.title }}</a>
+    </li>
+    {% else %}
+    <li>No articles so far</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

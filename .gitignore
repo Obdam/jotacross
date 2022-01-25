@@ -1,0 +1,11 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/text editor stuff
+.idea/
+.vscode
+
+# Python related ignores
+/venv
+__pycache__
