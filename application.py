@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 
-REPO_NAME = 'website'
+REPO_NAME = 'jotacross'
 DEBUG = True
 FLATPAGES_ROOT = 'articles'
 FLATPAGES_AUTO_RELOAD = DEBUG
