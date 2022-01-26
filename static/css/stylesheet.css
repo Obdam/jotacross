@@ -86,6 +86,12 @@ header a {
     color: var(--black);   
 }
 
+header > a > img {
+    width: 100%;
+    height: auto;
+    /* https://css-tricks.com/scale-svg/ */
+}
+
 header nav {
     justify-content: flex-end;
     margin-left: auto;
