@@ -7,7 +7,9 @@
     --black: #000000;
     --white: #ffffff;
     --light-grey: #f3f3f3;
-    --blue: #1e90ff;   
+    --blue: #1e90ff;
+    --dark-blue: #0B2C66;
+    --ligt-blue: #0077da;
 }
 
 html, body {
@@ -32,18 +34,24 @@ body {
     font-weight: 500;
     font-display: swap;
     src:
-        url("/website/static/fonts/Inter-Medium.woff2?v=3.11") format("woff2"), 
-        url("/website/static/fonts/Inter-Medium.woff?v=3.11") format("woff");
+        url("/static/fonts/Inter-Medium.woff2?v=3.11") format("woff2"), 
+        url("/static/fonts/Inter-Medium.woff?v=3.11") format("woff");
 }
 
-
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: bold;
-    font-weight: 700;
+    font-family: 'Waltograph';
+    font-style: normal;
     font-display: swap;
     src: 
-        url("/website/static/fonts/RobotoMono-Bold.ttf") format("truetype");
+        url("/static/fonts/waltograph42.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'AvenirNext';
+    font-style: normal;
+    font-display: swap;
+    src: 
+        url("/static/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 
 @supports (font-variation-settings: normal) {
@@ -60,7 +68,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Mono';
+    font-family: 'Waltograph';
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
 }
 
 p {
@@ -76,26 +89,30 @@ header {
     align-items: center;
     min-height: 3.25rem;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: var(--dark-blue);
     margin-bottom: 1rem;
+    border-bottom: 5px;
+    border-bottom-style: solid;
+    border-color: var(--ligt-blue);
 }
 
 header a {
     text-decoration: none; 
     margin-left: 1rem;
-    color: var(--black);   
+    color: var(--white); 
+    font-family: 'AvenirNext', 'Inter', Helvetica;
 }
 
 header > a > img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 100px;
     /* https://css-tricks.com/scale-svg/ */
 }
 
 header nav {
     justify-content: flex-end;
     margin-left: auto;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #menu-btn {
@@ -142,16 +159,18 @@ footer {
     min-height: 3.25rem;
     padding: 1rem 0;
     align-items: center;
+    color: var(--white);
     /* For fixed footer at the bottom: */
     margin-top: auto; 
     width: 100%;
     position: relative;
-    background-color: blanchedalmond;
+    background-color: var(--dark-blue);
 }
 
 footer p {
     text-decoration: none; 
-    margin: 0 1rem; 
+    margin: 0 1rem;
+    font-family: 'AvenirNext', 'Inter', Helvetica; 
 }
 
 @media only screen and (max-width: 600px) {
