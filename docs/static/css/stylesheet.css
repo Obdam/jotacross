@@ -1,16 +1,20 @@
 /* Base values */
+
 :root {
     /* Sizes */
     --base-size: 16px;
-
     /* Colours */
     --black: #000000;
     --white: #ffffff;
     --light-grey: #f3f3f3;
-    --blue: #1e90ff;   
+    --dark-grey: #808080;
+    --blue: #1e90ff;
+    --dark-blue: #0B2C66;
+    --ligt-blue: #0077da;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-size: var(--base-size);
@@ -25,25 +29,29 @@ body {
     /* justify-content: space-between; */
 }
 
+
 /* Typography */
+
 @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src:
-        url("/website/static/fonts/Inter-Medium.woff2?v=3.11") format("woff2"), 
-        url("/website/static/fonts/Inter-Medium.woff?v=3.11") format("woff");
+    src: url("/jotacross/static/fonts/Inter-Medium.woff2?v=3.11") format("woff2"), url("/jotacross/static/fonts/Inter-Medium.woff?v=3.11") format("woff");
 }
 
+@font-face {
+    font-family: 'Waltograph';
+    font-style: normal;
+    font-display: swap;
+    src: url("/jotacross/static/fonts/waltograph42.ttf") format("truetype");
+}
 
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: bold;
-    font-weight: 700;
+    font-family: 'AvenirNext';
+    font-style: normal;
     font-display: swap;
-    src: 
-        url("/website/static/fonts/RobotoMono-Bold.ttf") format("truetype");
+    src: url("/jotacross/static/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 
 @supports (font-variation-settings: normal) {
@@ -52,15 +60,36 @@ body {
     }
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
     text-align: justify;
     direction: ltr;
     line-height: 1.4;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Mono';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Waltograph';
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 p {
@@ -68,7 +97,9 @@ p {
     font-weight: 400;
 }
 
+
 /* Header */
+
 header {
     display: flex;
     flex-direction: row;
@@ -76,20 +107,36 @@ header {
     align-items: center;
     min-height: 3.25rem;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: var(--dark-blue);
     margin-bottom: 1rem;
+    border-top: 3px;
+    border-top-style: solid;
+    border-color: var(--ligt-blue);
 }
 
 header a {
-    text-decoration: none; 
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;
+    text-underline-offset: 0.4em;
     margin-left: 1rem;
-    color: var(--black);   
+    color: var(--white);
+    font-family: 'AvenirNext', 'Inter', Helvetica;
+}
+
+header a:hover,
+a:focus {
+    text-decoration-color: rgba(255, 255, 255, 1);
+}
+
+header>a>img {
+    width: 200px;
+    height: auto;
 }
 
 header nav {
     justify-content: flex-end;
     margin-left: auto;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #menu-btn {
@@ -109,7 +156,9 @@ header nav {
     margin-right: 2rem;
 }
 
+
 /* Content Grid */
+
 main {
     display: grid;
     position: relative;
@@ -117,9 +166,7 @@ main {
     margin-bottom: 1rem;
     grid-template-columns: 10% 1fr 1fr 10%;
     grid-template-rows: auto auto;
-    grid-template-areas: 
-        ". content content ." 
-        ". content content .";
+    grid-template-areas: ". content content ."". content content .";
 }
 
 main article {
@@ -130,22 +177,37 @@ main article {
     background-color: var(--white);
 }
 
+main article p {
+    margin-bottom: 1rem;
+}
+
+.uitslag {
+    max-width: inherit;
+    max-height: inherit;
+    margin: auto;
+    width: 100%;
+}
+
+
 /* Footer */
+
 footer {
     display: flex;
     min-height: 3.25rem;
     padding: 1rem 0;
     align-items: center;
+    color: var(--white);
     /* For fixed footer at the bottom: */
-    margin-top: auto; 
+    margin-top: auto;
     width: 100%;
     position: relative;
-    background-color: blanchedalmond;
+    background-color: var(--dark-blue);
 }
 
 footer p {
-    text-decoration: none; 
-    margin: 0 1rem; 
+    text-decoration: none;
+    margin: 0 1rem;
+    font-family: 'AvenirNext', 'Inter', Helvetica;
 }
 
 @media only screen and (max-width: 600px) {
@@ -153,13 +215,10 @@ footer p {
         height: auto;
         min-height: 100vh;
     }
-
     /* Header */
     header {
         display: grid;
-        grid-template-areas: 
-        "title   title   hamburger" 
-        "nav     nav     nav";
+        grid-template-areas: "title   title   hamburger""nav     nav     nav";
         padding: 1rem 0 0 0;
     }
     header .nav-logo {
@@ -167,11 +226,11 @@ footer p {
         padding-bottom: 1rem;
     }
     header nav a {
-        margin-left: 0; 
+        margin-left: 0;
     }
     .menu a {
         text-decoration: none;
-        color: black;
+        color: var(--white)
     }
     .menu-btn {
         display: none;
@@ -190,7 +249,7 @@ footer p {
         visibility: visible;
     }
     .navicon {
-        background: #333;
+        background: var(--white);
         display: block;
         height: 2px;
         width: 18px;
@@ -204,7 +263,7 @@ footer p {
     }
     .navicon:before,
     .navicon:after {
-        background: #333;
+        background: var(--white);
         display: block;
         width: 100%;
         height: 100%;
@@ -226,7 +285,7 @@ footer p {
     .menu a {
         padding: 20px 0;
         border-right: 1px solid var(--white);
-        background-color: var(--light-grey);
+        background-color: var(--dark-grey);
         width: 100%;
         text-align: center;
     }
@@ -246,10 +305,9 @@ footer p {
     .menu-btn:checked~.menu-icon .navicon:after {
         top: 0;
     }
-
     /* Content Grid */
     main {
         display: grid;
-        grid-template-areas: "content content content content" "content content content content";
+        grid-template-areas: "content content content content""content content content content";
     }
 }

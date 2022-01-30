@@ -15,25 +15,24 @@
         <a class="nav-logo" href="{{ url_for('home')}}">
             <img src="{{ url_for('static', filename='images/StrandwalStudios.svg') }}" alt="JotaCross 2022 Logo">
         </a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <!-- <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn">
             <span class="navicon" />
-        </label>
-        <nav class="menu">
+        </label> -->
+        <!-- <nav class="menu">
             <a href="#">Inschrijven</a>
             <a href="#">Nieuws</a>
-        </nav>
+        </nav> -->
     </header>
 
     <main>
         <article>
-            {% block content %}
-            {% endblock content %}
+            {% block content %} {% endblock content %}
         </article>
     </main>
 
     <footer>
-        <p>&#169; Designed in Akersloot for Strandwal Studios - 2021/2022 - All Rights Reserved</p>
+        <p>&#169; Designed in Akersloot - 2021/2022 - All Rights Reserved</p>
     </footer>
 </body>
 
