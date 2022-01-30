@@ -1,7 +1,7 @@
 {% extends "main.html" %} {% block content %}
-<h1>JotaCross 2022</h1>
+<h1>{% block title %} JotaCross 2022 {% endblock %}</h1>
 <p>
-    Op 22 oktober 2022 is het zover! Ga mee naar het sprookjesland van Noord-Holland: Akersloot! Tijdens deze doldwaze avond zal Scouting Akersloot de Strandwal ombouwen tot het majestueuze Strandwal Studios, de plek waar dromen worden gerealiseerd ✨.
+    Op 15 oktober 2022 is het zover! Ga mee naar het sprookjesland van Noord-Holland: Akersloot! Tijdens deze doldwaze avond zal Scouting Akersloot de Strandwal ombouwen tot het majestueuze Strandwal Studios, de plek waar dromen worden gerealiseerd ✨.
 </p>
 
 <p>
@@ -11,18 +11,4 @@
 <h2>Excel-ereren</h2>
 <p>Kan je nou echt niet wachten om de magische wereld van de JotaCross 2022 te betreden? Calculeer hier dan je eigen uitslag!
 </p>
-<iframe class="uitslag" src="https://docs.google.com/spreadsheets/d/1mO-HqwlJEnv41-vgDOYc8ERJxUDEFUXUFlTWJQDz7y8/edit?usp=sharing?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-
-
-<!-- <h1>{% block title %} Posts {% endblock %}</h1>
-<p>We love us some posts!</p>
-<ul>
-    {% for article in articles %}   
-    <li>
-        <a href="{{ url_for('articles', name=article.path) }}">{{ article.title }}</a>
-    </li>
-    {% else %}
-    <li>No articles so far</li>
-    {% endfor %}
-</ul> -->
-{% endblock content %}
+<iframe class="uitslag" src="https://docs.google.com/spreadsheets/d/1mO-HqwlJEnv41-vgDOYc8ERJxUDEFUXUFlTWJQDz7y8/edit?usp=sharing?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe> {% endblock content %}

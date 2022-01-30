@@ -21,16 +21,16 @@ freezer = Freezer(app)
 @app.route('/')
 def home():
     # Articles are pages with a publication date
-    published_articles = (p for p in flatpages if 'published' in p.meta)
+    # published_articles = (p for p in flatpages if 'published' in p.meta)
     # Show the 10 most recent articles, most recent first.
     # latest = sorted(articles, reverse=True, key=lambda p: p.meta['published'])
-    return render_template('home.html', articles=published_articles)
+    return render_template('home.html')
 
 
-@app.route('/articles/<name>.html')
-def articles(name):
-    post = flatpages.get_or_404(name)
-    return render_template('blog_post.html', post=post)
+# @app.route('/articles/<name>.html')
+# def articles(name):
+#     post = flatpages.get_or_404(name)
+#     return render_template('blog_post.html', post=post)
 
 
 if __name__ == "__main__":
