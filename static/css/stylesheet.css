@@ -131,6 +131,7 @@ a:focus {
 header>a>img {
     width: 200px;
     height: auto;
+    /* fill: var(--white) */
 }
 
 header nav {
