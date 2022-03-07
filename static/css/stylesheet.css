@@ -1,5 +1,4 @@
 /* Base values */
-
 :root {
     /* Sizes */
     --base-size: 16px;
@@ -205,6 +204,29 @@ footer p {
     text-decoration: none;
     margin: 0 1rem;
     font-family: 'AvenirNext', 'Inter', Helvetica;
+}
+
+.social-footer {
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem 0 0;
+    overflow: hidden;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.social-footer li {
+    float: left;
+    margin-left: 0.5rem;
+}
+
+.social-footer li a {
+    display: block;
+}
+
+.social-footer li a img {
+    width: 2rem;
+    height: auto;
 }
 
 @media only screen and (max-width: 600px) {
