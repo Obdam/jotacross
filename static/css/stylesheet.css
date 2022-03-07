@@ -165,7 +165,7 @@ main {
     position: relative;
     background-color: var(--light-grey);
     margin-bottom: 1rem;
-    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-columns: 17.5% 1fr 1fr 17.5%;
     grid-template-rows: auto auto;
     grid-template-areas: ". content content ."". content content .";
 }
@@ -180,6 +180,7 @@ main article {
 
 main article p {
     margin-bottom: 1rem;
+    font-size: 1.10rem;
 }
 
 .uitslag {
@@ -216,26 +217,32 @@ footer p {
         height: auto;
         min-height: 100vh;
     }
+
     /* Header */
     header {
         display: grid;
         grid-template-areas: "title   title   hamburger""nav     nav     nav";
         padding: 1rem 0 0 0;
     }
+
     header .nav-logo {
         grid-area: title;
         padding-bottom: 1rem;
     }
+
     header nav a {
         margin-left: 0;
     }
+
     .menu a {
         text-decoration: none;
         color: var(--white)
     }
+
     .menu-btn {
         display: none;
     }
+
     .menu-icon {
         grid-area: hamburger;
         cursor: pointer;
@@ -249,6 +256,7 @@ footer p {
         user-select: none;
         visibility: visible;
     }
+
     .navicon {
         background: var(--white);
         display: block;
@@ -256,12 +264,15 @@ footer p {
         width: 18px;
         position: relative;
     }
+
     .navicon:before {
         top: 5px;
     }
+
     .navicon:after {
         top: -5px;
     }
+
     .navicon:before,
     .navicon:after {
         background: var(--white);
@@ -272,6 +283,7 @@ footer p {
         position: absolute;
         transition: all .2s ease-out;
     }
+
     .menu {
         grid-area: nav;
         max-width: unset;
@@ -283,6 +295,7 @@ footer p {
         display: flex;
         flex-direction: column;
     }
+
     .menu a {
         padding: 20px 0;
         border-right: 1px solid var(--white);
@@ -290,22 +303,28 @@ footer p {
         width: 100%;
         text-align: center;
     }
+
     .menu-btn:checked~.menu {
         max-height: 240px;
     }
+
     .menu-btn:checked~.menu-icon .navicon {
         background: transparent;
     }
+
     .menu-btn:checked~.menu-icon .navicon:before {
         transform: rotate(-45deg);
     }
+
     .menu-btn:checked~.menu-icon .navicon:after {
         transform: rotate(45deg);
     }
+
     .menu-btn:checked~.menu-icon .navicon:before,
     .menu-btn:checked~.menu-icon .navicon:after {
         top: 0;
     }
+
     /* Content Grid */
     main {
         display: grid;
