@@ -31,7 +31,6 @@ body {
 
 
 /* Typography */
-
 @font-face {
     font-family: 'Inter';
     font-style: normal;
@@ -99,7 +98,6 @@ p {
 
 
 /* Header */
-
 header {
     display: flex;
     flex-direction: row;
@@ -116,8 +114,8 @@ header {
 
 header a {
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
-    transition: text-decoration-color 300ms;
     text-underline-offset: 0.4em;
+    transition: text-decoration-color 300ms;
     margin-left: 1rem;
     color: var(--white);
     font-family: 'AvenirNext', 'Inter', Helvetica;
@@ -125,13 +123,12 @@ header a {
 
 header a:hover,
 a:focus {
-    text-decoration-color: rgba(255, 255, 255, 1);
+    text-decoration-color: var(--ligt-blue);
 }
 
 header>a>img {
     width: 200px;
     height: auto;
-    /* fill: var(--white) */
 }
 
 header nav {
@@ -159,7 +156,6 @@ header nav {
 
 
 /* Content Grid */
-
 main {
     display: grid;
     position: relative;
@@ -192,7 +188,6 @@ main article p {
 
 
 /* Footer */
-
 footer {
     display: flex;
     min-height: 3.25rem;
