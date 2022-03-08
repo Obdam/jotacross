@@ -1,7 +1,12 @@
 {% extends "main.html" %}
 
 {% block content %}
-    <h3><strong>{{ post.title }}</strong></h3>
-    <p>Published: {{ post.published }}</p>
-    {{ post.html|safe }}
+    <h1><strong></strong>{% block title %}{{ post.title }}{% endblock %}</strong></h1>
+    <p class="article_metadata" >
+        <b>Datum:</b> {{ post.published }} <br>
+        <b>Auteur:</b> {{ post.author }}
+    </p>
+    <div class="article_contents">
+        {{ post.html|safe }}
+    </div>
 {% endblock %}

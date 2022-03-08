@@ -95,7 +95,6 @@ p {
     font-weight: 400;
 }
 
-
 /* Header */
 header {
     display: flex;
@@ -120,8 +119,7 @@ header a {
     font-family: 'AvenirNext', 'Inter', Helvetica;
 }
 
-header a:hover,
-a:focus {
+header a:hover, a:focus {
     text-decoration-color: var(--ligt-blue);
 }
 
@@ -149,10 +147,8 @@ header nav {
 .menu {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin-right: 2rem;
 }
-
 
 /* Content Grid */
 main {
@@ -178,13 +174,21 @@ main article p {
     font-size: 1.10rem;
 }
 
+main article .article_metadata {
+    font-size: 1rem
+}
+
+main article .article_contents img {
+    max-width: 100%;
+    height: auto;
+}
+
 .uitslag {
     max-width: inherit;
     height: 500px;
     margin: auto;
     width: 100%;
 }
-
 
 /* Footer */
 footer {
@@ -346,5 +350,11 @@ footer p {
     main {
         display: grid;
         grid-template-areas: "content content content content""content content content content";
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    main {
+        grid-template-columns: 10% 1fr 1fr 10%;
     }
 }
