@@ -90,6 +90,11 @@ h2 {
     font-weight: 500;
 }
 
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
 p {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -110,7 +115,7 @@ header {
     border-color: var(--ligt-blue);
 }
 
-header a {
+header>nav>a {
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
     text-underline-offset: 0.4em;
     transition: text-decoration-color 300ms;
@@ -119,7 +124,7 @@ header a {
     font-family: 'AvenirNext', 'Inter', Helvetica;
 }
 
-header a:hover, a:focus {
+header>nav>a:hover, a:focus {
     text-decoration-color: var(--ligt-blue);
 }
 
@@ -172,6 +177,20 @@ main article {
 main article p {
     margin-bottom: 1rem;
     font-size: 1.10rem;
+}
+
+.article-preview {
+    padding-left: 0.5rem;
+    background-color: #000000;
+}
+
+.article-preview>a:link, a:visited {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.article-preview:hover, .article-preview:active {
+    background-color: blue;
 }
 
 main article .article_metadata {

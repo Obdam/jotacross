@@ -1,4 +1,4 @@
-{% extends "main.html" %} 
+{% extends "main.html" %}
 {% block content %}
 <h1>{% block title %} JotaCross 2022 {% endblock %}</h1>
 <p>
@@ -11,6 +11,15 @@
     Denk aan koning worden van alle dieren, vinden van hét glazen muiltje of toch het oord waar speelgoed tot leven
     komt. Je moet op 22 oktober één ding niet vergeten: <i>never grow up</i>…
 </p>
+<h2>Nieuws</h2>
+{% for article in articles %}
+
+<a class="article-preview" href="{{ url_for('articles', name=article.path) }}">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.teaser }}</p>
+</a>
+
+{% endfor %}
 
 <h2>Excel-ereren</h2>
 <p>Kan je nou echt niet wachten om de magische wereld van de JotaCross 2022 te betreden? Calculeer hier dan je eigen
@@ -18,16 +27,4 @@
 </p>
 <iframe class="uitslag"
     src="https://docs.google.com/spreadsheets/d/1mO-HqwlJEnv41-vgDOYc8ERJxUDEFUXUFlTWJQDz7y8/edit?usp=sharing?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-
-<h2>Nieuws</h2>
-<p>We love us some posts!</p>
-<ul>
-    {% for article in articles %}   
-    <li>
-        <a href="{{ url_for('articles', name=article.path) }}">{{ article.title }}</a>
-    </li>
-    {% else %}
-    <li>No articles so far</li>
-    {% endfor %}
-</ul>
 {% endblock content %}
