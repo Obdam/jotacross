@@ -115,7 +115,7 @@ header {
     border-color: var(--ligt-blue);
 }
 
-header>nav>a {
+header>nav>a:link, a:visited {
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
     text-underline-offset: 0.4em;
     transition: text-decoration-color 300ms;
