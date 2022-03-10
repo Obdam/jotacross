@@ -7,6 +7,8 @@
     --white: #ffffff;
     --light-grey: #f3f3f3;
     --dark-grey: #808080;
+    --shadow-grey: #f8f8f8;
+    /* --dark-grey: rgba(128, 128, 128, 0.25); */
     --blue: #1e90ff;
     --dark-blue: #0B2C66;
     --ligt-blue: #0077da;
@@ -25,9 +27,7 @@ body {
     background-color: var(--light-grey);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
-
 
 /* Typography */
 @font-face {
@@ -180,8 +180,13 @@ main article p {
 }
 
 .article-preview {
-    padding-left: 0.5rem;
-    background-color: #000000;
+    padding: 0.5rem;
+}
+
+.article-preview hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .article-preview>a:link, a:visited {
@@ -190,7 +195,8 @@ main article p {
 }
 
 .article-preview:hover, .article-preview:active {
-    background-color: blue;
+    background-color: var(--shadow-grey);
+    border-radius: 0.5rem;
 }
 
 main article .article_metadata {

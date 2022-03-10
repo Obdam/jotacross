@@ -1,7 +1,7 @@
 title: A brand new day
 author: Cas Obdam
 published: 22-01-2022
-teaser: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dui sit amet erat tincidunt eleifend. Nullam faucibus viverra ligula, at mattis lorem cursus at. Curabitur sodales sed magna at semper. Maecenas ipsum tellus, consectetur sit amet tincidunt a, consequat in magna. Fusce lacus augue, dapibus ut mi ut, cursus pulvinar arcu. Nam consectetur dictum lorem quis commodo. In ac ipsum risus. Nulla facilisis tellus et sodales feugiat. Praesent sed ante ultrices, auctor ex quis, fringilla arcu. Pellentesque suscipit est ut arcu interdum accumsan. Mauris mattis diam erat, tincidunt rhoncus augue porttitor nec.
+teaser: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu dui sit amet erat tincidunt eleifend. Nullam faucibus viverra ligula, at mattis lorem cursus at.
 
 ![Akersloot kan alleen maar winnen](../static/images/overwinning.jpg)
 

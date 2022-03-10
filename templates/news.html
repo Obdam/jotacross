@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+<h1>{% block title %} Nieuws {% endblock %}</h1>
+<p>
+    De laatste aankondigingen, trailers en nieuws uit Strandwal Studios!
+</p>
+{% for article in articles %}
+<section class="article-preview">
+    <a href="{{ url_for('articles', name=article.path) }}">
+        <h3>{{ article.title }}</h3>
+        <p><i>{{ article.teaser }}</i></p>
+        {% if not loop.last %}
+        <hr>
+        {% endif %}
+    </a>
+</section>
+{% endfor %}
+{% endblock content %}

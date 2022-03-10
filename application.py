@@ -28,6 +28,14 @@ def home():
     return render_template('home.html', articles=latest)
 
 
+@app.route('/nieuws.html')
+def nieuws():
+    # Articles are pages with a publication date
+    published_articles = (p for p in flatpages if 'published' in p.meta)
+    latest = sorted(published_articles, reverse=True,
+                    key=lambda p: p.meta['published'])
+    return render_template('news.html', articles=latest)
+
 @app.route('/articles/<name>.html')
 def articles(name):
     post = flatpages.get_or_404(name)
@@ -35,6 +43,6 @@ def articles(name):
 
 
 if __name__ == "__main__":
-    # freezer.freeze()
+    freezer.freeze()
     # export FLASK_APP=application.py && export FLASK_ENV=development flask run
-    app.run(debug=True)
+    # app.run(debug=True)
