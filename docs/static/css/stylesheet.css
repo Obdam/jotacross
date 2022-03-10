@@ -6,9 +6,9 @@
     --black: #000000;
     --white: #ffffff;
     --light-grey: #f3f3f3;
-    --dark-grey: #808080;
+    /* --dark-grey: #808080; */
     --shadow-grey: #f8f8f8;
-    /* --dark-grey: rgba(128, 128, 128, 0.25); */
+    --dark-grey: rgba(128, 128, 128, 0.60);
     --blue: #1e90ff;
     --dark-blue: #0B2C66;
     --ligt-blue: #0077da;
@@ -276,7 +276,7 @@ footer p {
         padding-bottom: 1rem;
     }
 
-    header nav a {
+    header>nav>a:link, header>nav>a:visited {
         margin-left: 0;
     }
 
