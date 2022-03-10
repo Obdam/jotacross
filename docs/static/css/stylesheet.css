@@ -115,7 +115,7 @@ header {
     border-color: var(--ligt-blue);
 }
 
-header>nav>a:link, a:visited {
+header>nav>a:link, header>nav>a:visited {
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
     text-underline-offset: 0.4em;
     transition: text-decoration-color 300ms;
@@ -124,7 +124,7 @@ header>nav>a:link, a:visited {
     font-family: 'AvenirNext', 'Inter', Helvetica;
 }
 
-header>nav>a:hover, a:focus {
+header>nav>a:hover, header>nav>a:focus {
     text-decoration-color: var(--ligt-blue);
 }
 
@@ -189,7 +189,7 @@ main article p {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.article-preview>a:link, a:visited {
+.article-preview>a:link, .article-preview>a:visited {
     color: var(--black);
     text-decoration: none;
 }
