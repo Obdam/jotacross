@@ -48,6 +48,6 @@ def downloads(filename):
 
 
 if __name__ == "__main__":
-    # freezer.freeze()
+    freezer.freeze()
     # export FLASK_APP=application.py && export FLASK_ENV=development flask run
-    app.run(debug=True)
+    # app.run(debug=True)
