@@ -11,6 +11,7 @@
     Denk aan koning worden van alle dieren, vinden van hét glazen muiltje of toch het oord waar speelgoed tot leven
     komt. Je moet op 22 oktober één ding niet vergeten: <i>never grow up</i>…
 </p>
+{% if products|length > 1 %}
 <h2>Nieuws</h2>
 {% for article in articles %}
 <section class="article-preview">
@@ -23,6 +24,9 @@
     </a>
 </section>
 {% endfor %}
+{% endif %}
+
+<button type="submit" formmethod="get" formtarget="_blank"><a href="{{ url_for('downloads', filename='walt-disney-boek.epub') }}">Download</a></button>
 
 <h2>Excel-ereren</h2>
 <p>Kan je nou echt niet wachten om de magische wereld van de JotaCross 2022 te betreden? Calculeer hier dan je eigen

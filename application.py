@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 
@@ -42,7 +42,12 @@ def articles(name):
     return render_template('blog_post.html', post=post)
 
 
+@app.route('/downloads/<path:filename>', methods=['GET'])
+def downloads(filename):
+    return send_from_directory(directory="downloads", path=filename)
+
+
 if __name__ == "__main__":
-    freezer.freeze()
+    # freezer.freeze()
     # export FLASK_APP=application.py && export FLASK_ENV=development flask run
-    # app.run(debug=True)
+    app.run(debug=True)

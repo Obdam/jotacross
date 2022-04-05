@@ -1,6 +1,7 @@
 # System files
 .DS_Store
 Thumbs.db
+:Zone.Identifier
 
 # IDE/text editor stuff
 .idea/
