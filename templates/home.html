@@ -1,15 +1,15 @@
 {% extends "main.html" %}
 {% block content %}
-<h1>{% block title %} JotaCross 2022 {% endblock %}</h1>
+<h1>JotaCross 2022</h1>
+<i><h4>{% block title %}Akersloot... waar dromen werkelijkheid worden{% endblock %}</h4></i>
 <p>
     Op 15 oktober 2022 is het zover! Ga mee naar het sprookjesland van Noord-Holland: Akersloot! Tijdens deze doldwaze
-    avond zal Scouting Akersloot de Strandwal ombouwen tot het majestueuze Strandwal Studios, de plek waar dromen worden
-    gerealiseerd ✨.
+    JotaCross zal Scouting Akersloot de Strandwal ombouwen tot het majestueuze Strandwal Studios, de plek waar dromen
+    werkelijkheid worden ✨.
 </p>
-
 <p>
     Denk aan koning worden van alle dieren, vinden van hét glazen muiltje of toch het oord waar speelgoed tot leven
-    komt. Je moet op 22 oktober één ding niet vergeten: <i>never grow up</i>…
+    komt. Je moet op 15 oktober één ding niet vergeten: <i>some crosses are worth melting for.</i>…
 </p>
 {% if articles|length > 1 %}
 <h2>Nieuws</h2>
@@ -26,11 +26,10 @@
 {% endfor %}
 {% endif %}
 
-<button type="submit" formmethod="get" formtarget="_blank"><a href="{{ url_for('downloads', filename='walt-disney-boek.epub') }}">Download</a></button>
-
 <h2>Excel-ereren</h2>
-<p>Kan je nou echt niet wachten om de magische wereld van de JotaCross 2022 te betreden? Calculeer hier dan je eigen
-    uitslag!
+<p>
+    Kan je nou echt niet wachten om de magische wereld van de JotaCross 2022 te betreden? Is tweede niet winnen?
+    Calculeer hier dan je eigen uitslag!
 </p>
 <iframe class="uitslag"
     src="https://docs.google.com/spreadsheets/d/1mO-HqwlJEnv41-vgDOYc8ERJxUDEFUXUFlTWJQDz7y8/edit?usp=sharing?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>

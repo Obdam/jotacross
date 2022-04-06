@@ -6,12 +6,12 @@
     --black: #000000;
     --white: #ffffff;
     --light-grey: #f3f3f3;
-    /* --dark-grey: #808080; */
     --shadow-grey: #f8f8f8;
     --dark-grey: rgba(128, 128, 128, 0.60);
     --blue: #1e90ff;
     --dark-blue: #0B2C66;
     --ligt-blue: #0077da;
+    --ligt-blue-shadow: #0a6cbd;
 }
 
 html,
@@ -94,7 +94,10 @@ h3 {
     font-size: 2rem;
     font-weight: 500;
 }
-
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 p {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -163,7 +166,8 @@ main {
     margin-bottom: 1rem;
     grid-template-columns: 17.5% 1fr 1fr 17.5%;
     grid-template-rows: auto auto;
-    grid-template-areas: ". content content ."". content content .";
+    grid-template-areas: ". content content ."
+        ". content content .";
 }
 
 main article {
@@ -258,6 +262,26 @@ footer p {
     height: auto;
 }
 
+.button-normal {
+    color: var(--white);
+    font-family: 'AvenirNext', 'Inter', Helvetica;
+    background-color: var(--ligt-blue);
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+.button-normal a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.button-normal:hover, .button-normal:focus {
+    background-color: var(--ligt-blue-shadow);
+}
+
 @media only screen and (max-width: 600px) {
     body {
         height: auto;
@@ -267,7 +291,8 @@ footer p {
     /* Header */
     header {
         display: grid;
-        grid-template-areas: "title   title   hamburger""nav     nav     nav";
+        grid-template-areas: "title   title   hamburger"
+            "nav     nav     nav";
         padding: 1rem 0 0 0;
     }
 
