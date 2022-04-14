@@ -9,7 +9,7 @@ FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FREEZER_DESTINATION = 'docs'
 FREEZER_DESTINATION_IGNORE = ['.nojekyll']
-FREEZER_BASE_URL = "http://localhost/{0}".format(REPO_NAME)
+FREEZER_BASE_URL = "http://localhost/"
 
 
 app = Flask(__name__)
@@ -41,10 +41,10 @@ def articles(name):
     post = flatpages.get_or_404(name)
     return render_template('blog_post.html', post=post)
 
-
-@app.route('/downloads/<path:filename>', methods=['GET'])
-def downloads(filename):
-    return send_from_directory(directory="downloads", path=filename)
+# No need yet, will be used for website downloads.
+# @app.route('/downloads/<path:filename>', methods=['GET'])
+# def downloads(filename):
+#     return send_from_directory(directory="downloads", path=filename)
 
 
 if __name__ == "__main__":
