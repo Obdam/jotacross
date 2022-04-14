@@ -35,21 +35,21 @@ body {
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url("/jotacross/static/fonts/Inter-Medium.woff2?v=3.11") format("woff2"), url("/jotacross/static/fonts/Inter-Medium.woff?v=3.11") format("woff");
+    src: url("/static/fonts/Inter-Medium.woff2?v=3.11") format("woff2"), url("/static/fonts/Inter-Medium.woff?v=3.11") format("woff");
 }
 
 @font-face {
     font-family: 'Waltograph';
     font-style: normal;
     font-display: swap;
-    src: url("/jotacross/static/fonts/waltograph42.ttf") format("truetype");
+    src: url("/static/fonts/waltograph42.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'AvenirNext';
     font-style: normal;
     font-display: swap;
-    src: url("/jotacross/static/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+    src: url("/static/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 
 @supports (font-variation-settings: normal) {

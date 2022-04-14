@@ -36,6 +36,7 @@ def nieuws():
                     key=lambda p: p.meta['published'])
     return render_template('news.html', articles=latest)
 
+
 @app.route('/articles/<name>.html')
 def articles(name):
     post = flatpages.get_or_404(name)

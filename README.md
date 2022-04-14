@@ -1,2 +1,2 @@
 # website
-Personal website
+JotaCross 2022 website
