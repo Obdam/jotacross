@@ -94,10 +94,12 @@ h3 {
     font-size: 2rem;
     font-weight: 500;
 }
+
 h4 {
     font-size: 1.5rem;
     font-weight: 500;
 }
+
 p {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -273,6 +275,11 @@ footer p {
     border-radius: 0.5rem;
 }
 
+article .button-normal {
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
 .button-normal a {
     text-decoration: none;
     color: var(--white);
@@ -399,7 +406,8 @@ footer p {
     /* Content Grid */
     main {
         display: grid;
-        grid-template-areas: "content content content content""content content content content";
+        grid-template-areas: "content content content content"
+            "content content content content";
     }
 }
 
