@@ -94,10 +94,12 @@ h3 {
     font-size: 2rem;
     font-weight: 500;
 }
+
 h4 {
     font-size: 1.5rem;
     font-weight: 500;
 }
+
 p {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -181,6 +183,12 @@ main article {
 main article p {
     margin-bottom: 1rem;
     font-size: 1.10rem;
+}
+
+main article img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
 }
 
 .article-preview {
@@ -271,6 +279,11 @@ footer p {
     font-size: 1rem;
     font-weight: 600;
     border-radius: 0.5rem;
+}
+
+article .button-normal {
+    margin-left: 40%;
+    margin-right: 40%;
 }
 
 .button-normal a {
@@ -400,7 +413,7 @@ footer p {
     main {
         display: grid;
         grid-template-areas: "content content content content"
-                            "content content content content";
+            "content content content content";
     }
 }
 
