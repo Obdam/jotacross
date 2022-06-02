@@ -113,6 +113,7 @@ header {
     align-items: center;
     min-height: 3.25rem;
     width: 100%;
+    overflow: hidden;
     background-color: var(--dark-blue);
     margin-bottom: 1rem;
     border-top: 3px;
@@ -191,6 +192,12 @@ main article img {
     margin-top: 1.5rem;
 }
 
+main article button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .article-preview {
     padding: 0.5rem;
 }
@@ -220,13 +227,6 @@ main article .article_contents img {
     height: auto;
 }
 
-.uitslag {
-    max-width: inherit;
-    height: 500px;
-    margin: auto;
-    width: 100%;
-}
-
 /* Footer */
 footer {
     display: flex;
@@ -234,6 +234,7 @@ footer {
     padding: 1rem 0;
     align-items: center;
     color: var(--white);
+    overflow: hidden;
     /* For fixed footer at the bottom: */
     margin-top: auto;
     width: 100%;
@@ -279,11 +280,6 @@ footer p {
     font-size: 1rem;
     font-weight: 600;
     border-radius: 0.5rem;
-}
-
-article .button-normal {
-    margin-left: 40%;
-    margin-right: 40%;
 }
 
 .button-normal a {
